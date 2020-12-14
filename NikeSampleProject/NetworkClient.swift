@@ -12,12 +12,12 @@ protocol NetworkClientProtocol {
 }
 
 
-class NetworkClient: NetworkClientProtocol {
+final class NetworkClient: NetworkClientProtocol {
     /// Fetch data using data task
     /// - Parameter completion: Uses a result with data as success and NewsReader error for an error
     func fetchData(completion: @escaping (Result<Data, NikeError>) -> Void) {
 
-        guard let url = URL(string: "https://rss.itunes.apple.com/api/v1/us/apple-music/coming-soon/all/100/explicit.json") else {
+        guard let url = URL(string: "https://rss.itunes.apple.com/api/v1/us/apple-music/top-albums/all/100/explicit.json") else {
             completion(.failure(.networkIssue("Invalid url")))
             return
         }

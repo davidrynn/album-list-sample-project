@@ -17,8 +17,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         let window = UIWindow(windowScene: windowScene)
         let client = NetworkClient()
-        let mainViewModel = MainViewModel(networkClient: client)
-        let albumsTableViewController = MainTableViewController(viewModel: mainViewModel)
+        let mainViewModel = TopAlbumsViewModel(networkClient: client)
+        let albumsTableViewController = TopAlbumsTableViewController(viewModel: mainViewModel)
         window.rootViewController = UINavigationController(rootViewController: albumsTableViewController)
         window.makeKeyAndVisible()
         self.window = window

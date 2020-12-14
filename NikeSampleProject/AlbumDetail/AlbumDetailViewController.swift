@@ -7,9 +7,10 @@
 
 import UIKit
 
-class AlbumDetailViewController: UIViewController {
+final class AlbumDetailViewController: UIViewController {
 
-    let viewModel: AlbumDetailViewModel
+    private let viewModel: AlbumDetailViewModel
+    private let imageLoader: ImageLoaderProtocol
 
     lazy var imageView: UIImageView = {
         let view = UIImageView()
@@ -25,8 +26,9 @@ class AlbumDetailViewController: UIViewController {
         return label
     }()
 
-    init(viewModel: AlbumDetailViewModel) {
+    init(viewModel: AlbumDetailViewModel, imageLoader: ImageLoaderProtocol) {
         self.viewModel = viewModel
+        self.imageLoader = imageLoader
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -36,9 +38,16 @@ class AlbumDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadImage()
         setupViews()
         setupConstraints()
 
+    }
+
+    func loadImage() {
+        self.imageLoader.loadImage(urlString: viewModel.artworkUrl, completion: { image in
+            self.imageView.image = image
+        })
     }
     
     func setupViews() {

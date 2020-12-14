@@ -1,5 +1,5 @@
 //
-//  MainViewModel.swift
+//  TopAlbumsViewModel.swift
 //  NikeSampleProject
 //
 //  Created by David Rynn on 12/11/20.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class MainViewModel {
+final class TopAlbumsViewModel {
 
     let networkClient: NetworkClientProtocol
     var albums = [Album]()

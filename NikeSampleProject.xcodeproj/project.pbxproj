@@ -9,15 +9,14 @@
 /* Begin PBXBuildFile section */
 		22C2D122258448EF009DD415 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2D121258448EF009DD415 /* AppDelegate.swift */; };
 		22C2D124258448EF009DD415 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2D123258448EF009DD415 /* SceneDelegate.swift */; };
-		22C2D126258448EF009DD415 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2D125258448EF009DD415 /* ViewController.swift */; };
 		22C2D129258448F0009DD415 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C2D127258448F0009DD415 /* Main.storyboard */; };
 		22C2D12B258448F0009DD415 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22C2D12A258448F0009DD415 /* Assets.xcassets */; };
 		22C2D12E258448F0009DD415 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C2D12C258448F0009DD415 /* LaunchScreen.storyboard */; };
 		22C2D139258448F1009DD415 /* NikeSampleProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2D138258448F1009DD415 /* NikeSampleProjectTests.swift */; };
 		22C2D144258448F1009DD415 /* NikeSampleProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2D143258448F1009DD415 /* NikeSampleProjectUITests.swift */; };
 		22C2D15625844EF8009DD415 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2D15525844EF8009DD415 /* NetworkClient.swift */; };
-		22C2D15E25845977009DD415 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2D15D25845977009DD415 /* MainTableViewController.swift */; };
-		22C2D163258459A4009DD415 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2D162258459A4009DD415 /* MainViewModel.swift */; };
+		22C2D15E25845977009DD415 /* TopAlbumsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2D15D25845977009DD415 /* TopAlbumsTableViewController.swift */; };
+		22C2D163258459A4009DD415 /* TopAlbumsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2D162258459A4009DD415 /* TopAlbumsViewModel.swift */; };
 		22C2D16825845F8F009DD415 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2D16725845F8F009DD415 /* Album.swift */; };
 		22C2D16D25846811009DD415 /* AlbumTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2D16C25846811009DD415 /* AlbumTest.swift */; };
 		22C2D172258468DE009DD415 /* TestJson.json in Resources */ = {isa = PBXBuildFile; fileRef = 22C2D171258468DE009DD415 /* TestJson.json */; };
@@ -49,7 +48,6 @@
 		22C2D11E258448EF009DD415 /* NikeSampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NikeSampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22C2D121258448EF009DD415 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22C2D123258448EF009DD415 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		22C2D125258448EF009DD415 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		22C2D128258448F0009DD415 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		22C2D12A258448F0009DD415 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22C2D12D258448F0009DD415 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,8 +60,8 @@
 		22C2D145258448F1009DD415 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22C2D1542584499B009DD415 /* ReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
 		22C2D15525844EF8009DD415 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
-		22C2D15D25845977009DD415 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
-		22C2D162258459A4009DD415 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		22C2D15D25845977009DD415 /* TopAlbumsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAlbumsTableViewController.swift; sourceTree = "<group>"; };
+		22C2D162258459A4009DD415 /* TopAlbumsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAlbumsViewModel.swift; sourceTree = "<group>"; };
 		22C2D16725845F8F009DD415 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		22C2D16C25846811009DD415 /* AlbumTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTest.swift; sourceTree = "<group>"; };
 		22C2D171258468DE009DD415 /* TestJson.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TestJson.json; sourceTree = "<group>"; };
@@ -99,6 +97,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		228E1D5825856AE70012B6D6 /* AlbumDetail */ = {
+			isa = PBXGroup;
+			children = (
+				22C2D18B25849957009DD415 /* AlbumDetailViewController.swift */,
+				22C2D186258498D1009DD415 /* AlbumDetailViewModel.swift */,
+			);
+			path = AlbumDetail;
+			sourceTree = "<group>";
+		};
 		22C2D115258448EF009DD415 = {
 			isa = PBXGroup;
 			children = (
@@ -122,23 +129,18 @@
 		22C2D120258448EF009DD415 /* NikeSampleProject */ = {
 			isa = PBXGroup;
 			children = (
-				22C2D121258448EF009DD415 /* AppDelegate.swift */,
-				22C2D1542584499B009DD415 /* ReadMe.md */,
-				22C2D18B25849957009DD415 /* AlbumDetailViewController.swift */,
-				22C2D15525844EF8009DD415 /* NetworkClient.swift */,
-				22C2D123258448EF009DD415 /* SceneDelegate.swift */,
-				22C2D125258448EF009DD415 /* ViewController.swift */,
-				22C2D162258459A4009DD415 /* MainViewModel.swift */,
-				22C2D186258498D1009DD415 /* AlbumDetailViewModel.swift */,
 				22C2D16725845F8F009DD415 /* Album.swift */,
-				22C2D15D25845977009DD415 /* MainTableViewController.swift */,
-				22C2D19025855E96009DD415 /* ImageLoader.swift */,
-				22C2D17C25847E2E009DD415 /* AlbumTableViewCell.swift */,
-				22C2D18125847E6E009DD415 /* AlbumCellViewModel.swift */,
-				22C2D127258448F0009DD415 /* Main.storyboard */,
+				228E1D5825856AE70012B6D6 /* AlbumDetail */,
+				22C2D121258448EF009DD415 /* AppDelegate.swift */,
 				22C2D12A258448F0009DD415 /* Assets.xcassets */,
-				22C2D12C258448F0009DD415 /* LaunchScreen.storyboard */,
+				22C2D19025855E96009DD415 /* ImageLoader.swift */,
 				22C2D12F258448F0009DD415 /* Info.plist */,
+				22C2D12C258448F0009DD415 /* LaunchScreen.storyboard */,
+				22C2D127258448F0009DD415 /* Main.storyboard */,
+				22C2D15525844EF8009DD415 /* NetworkClient.swift */,
+				22C2D1542584499B009DD415 /* ReadMe.md */,
+				22C2D123258448EF009DD415 /* SceneDelegate.swift */,
+				22C2D19B258567A6009DD415 /* TopAlbums */,
 			);
 			path = NikeSampleProject;
 			sourceTree = "<group>";
@@ -161,6 +163,17 @@
 				22C2D145258448F1009DD415 /* Info.plist */,
 			);
 			path = NikeSampleProjectUITests;
+			sourceTree = "<group>";
+		};
+		22C2D19B258567A6009DD415 /* TopAlbums */ = {
+			isa = PBXGroup;
+			children = (
+				22C2D18125847E6E009DD415 /* AlbumCellViewModel.swift */,
+				22C2D17C25847E2E009DD415 /* AlbumTableViewCell.swift */,
+				22C2D15D25845977009DD415 /* TopAlbumsTableViewController.swift */,
+				22C2D162258459A4009DD415 /* TopAlbumsViewModel.swift */,
+			);
+			path = TopAlbums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,15 +307,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22C2D126258448EF009DD415 /* ViewController.swift in Sources */,
 				22C2D122258448EF009DD415 /* AppDelegate.swift in Sources */,
 				22C2D19125855E96009DD415 /* ImageLoader.swift in Sources */,
 				22C2D124258448EF009DD415 /* SceneDelegate.swift in Sources */,
 				22C2D18C25849957009DD415 /* AlbumDetailViewController.swift in Sources */,
-				22C2D15E25845977009DD415 /* MainTableViewController.swift in Sources */,
+				22C2D15E25845977009DD415 /* TopAlbumsTableViewController.swift in Sources */,
 				22C2D15625844EF8009DD415 /* NetworkClient.swift in Sources */,
 				22C2D16825845F8F009DD415 /* Album.swift in Sources */,
-				22C2D163258459A4009DD415 /* MainViewModel.swift in Sources */,
+				22C2D163258459A4009DD415 /* TopAlbumsViewModel.swift in Sources */,
 				22C2D18225847E6F009DD415 /* AlbumCellViewModel.swift in Sources */,
 				22C2D17D25847E2E009DD415 /* AlbumTableViewCell.swift in Sources */,
 				22C2D187258498D1009DD415 /* AlbumDetailViewModel.swift in Sources */,

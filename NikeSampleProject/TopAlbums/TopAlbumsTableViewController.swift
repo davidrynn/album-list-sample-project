@@ -1,5 +1,5 @@
 //
-//  MainTableViewController.swift
+//  TopAlbumsTableViewController.swift
 //  NikeSampleProject
 //
 //  Created by David Rynn on 12/11/20.
@@ -7,13 +7,13 @@
 
 import UIKit
 
-class MainTableViewController: UITableViewController {
+final class TopAlbumsTableViewController: UITableViewController {
 
-    var viewModel: MainViewModel
+    var viewModel: TopAlbumsViewModel
     private let imageLoader = ImageLoader()
 
 
-    init(viewModel: MainViewModel){
+    init(viewModel: TopAlbumsViewModel){
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -51,10 +51,14 @@ class MainTableViewController: UITableViewController {
         return cell
     }
 
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
+    }
+
     // MARK: - Table view delegate
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = AlbumDetailViewController(viewModel: viewModel.detailViewModel(index: indexPath.row))
+        let vc = AlbumDetailViewController(viewModel: viewModel.detailViewModel(index: indexPath.row), imageLoader: imageLoader)
         navigationController?.pushViewController(vc, animated: true)
     }
 
