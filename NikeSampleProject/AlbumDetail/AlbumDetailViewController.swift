@@ -9,26 +9,10 @@ import UIKit
 
 final class AlbumDetailViewController: UIViewController {
 
-    private let viewModel: AlbumDetailViewModel
-    private let imageLoader: ImageLoaderProtocol
-
-    lazy var imageView: UIImageView = {
-        let view = UIImageView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.image = UIImage(systemName: "photo")
-        view.contentMode = .scaleAspectFit
-        return view
-    }()
-
-    lazy var albumLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
+    let detailView: AlbumDetailView
 
     init(viewModel: AlbumDetailViewModel, imageLoader: ImageLoaderProtocol) {
-        self.viewModel = viewModel
-        self.imageLoader = imageLoader
+        self.detailView = AlbumDetailView(viewModel: viewModel, imageLoader: imageLoader)
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -38,46 +22,12 @@ final class AlbumDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadImage()
         setupViews()
-        setupConstraints()
-
-    }
-
-    func loadImage() {
-        self.imageLoader.loadImage(urlString: viewModel.artworkUrl, completion: { image in
-            self.imageView.image = image
-        })
     }
     
     func setupViews() {
-        view.backgroundColor = .white
-        view.addSubview(albumLabel)
-        view.addSubview(imageView)
-        albumLabel.text = viewModel.name
-
+        self.view.addSubview(detailView)
+        detailView.frame = view.frame
     }
-
-    func setupConstraints() {
-        NSLayoutConstraint.activate([
-            imageView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            imageView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
-            imageView.widthAnchor.constraint(equalTo: self.view.widthAnchor),
-            imageView.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.33),
-
-            albumLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor),
-            albumLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            albumLabel.heightAnchor.constraint(equalToConstant: 40)
-        ])
-    }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

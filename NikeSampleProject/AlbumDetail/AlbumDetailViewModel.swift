@@ -14,4 +14,5 @@ struct AlbumDetailViewModel {
     var releaseDate: String
     var genres: [Genre]
     var copyright: String
+    var url: String
 }

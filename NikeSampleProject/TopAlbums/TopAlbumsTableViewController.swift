@@ -28,7 +28,6 @@ final class TopAlbumsTableViewController: UITableViewController {
         viewModel.loadAlbums(completion: { error in
             DispatchQueue.main.async {
                 self.tableView.reloadData()
-           //     self.reloadInputViews()
             }
         })
     }

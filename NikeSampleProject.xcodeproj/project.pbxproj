@@ -25,6 +25,8 @@
 		22C2D187258498D1009DD415 /* AlbumDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2D186258498D1009DD415 /* AlbumDetailViewModel.swift */; };
 		22C2D18C25849957009DD415 /* AlbumDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2D18B25849957009DD415 /* AlbumDetailViewController.swift */; };
 		22C2D19125855E96009DD415 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2D19025855E96009DD415 /* ImageLoader.swift */; };
+		22C6054C2587EAE600A3270C /* AlbumDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C6054B2587EAE600A3270C /* AlbumDetailView.swift */; };
+		22C605512588271500A3270C /* Extension+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C605502588271500A3270C /* Extension+UIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		22C2D186258498D1009DD415 /* AlbumDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailViewModel.swift; sourceTree = "<group>"; };
 		22C2D18B25849957009DD415 /* AlbumDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailViewController.swift; sourceTree = "<group>"; };
 		22C2D19025855E96009DD415 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		22C6054B2587EAE600A3270C /* AlbumDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailView.swift; sourceTree = "<group>"; };
+		22C605502588271500A3270C /* Extension+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIColor.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,7 @@
 			children = (
 				22C2D18B25849957009DD415 /* AlbumDetailViewController.swift */,
 				22C2D186258498D1009DD415 /* AlbumDetailViewModel.swift */,
+				22C6054B2587EAE600A3270C /* AlbumDetailView.swift */,
 			);
 			path = AlbumDetail;
 			sourceTree = "<group>";
@@ -133,6 +138,7 @@
 				228E1D5825856AE70012B6D6 /* AlbumDetail */,
 				22C2D121258448EF009DD415 /* AppDelegate.swift */,
 				22C2D12A258448F0009DD415 /* Assets.xcassets */,
+				22C605502588271500A3270C /* Extension+UIColor.swift */,
 				22C2D19025855E96009DD415 /* ImageLoader.swift */,
 				22C2D12F258448F0009DD415 /* Info.plist */,
 				22C2D12C258448F0009DD415 /* LaunchScreen.storyboard */,
@@ -314,9 +320,11 @@
 				22C2D15E25845977009DD415 /* TopAlbumsTableViewController.swift in Sources */,
 				22C2D15625844EF8009DD415 /* NetworkClient.swift in Sources */,
 				22C2D16825845F8F009DD415 /* Album.swift in Sources */,
+				22C6054C2587EAE600A3270C /* AlbumDetailView.swift in Sources */,
 				22C2D163258459A4009DD415 /* TopAlbumsViewModel.swift in Sources */,
 				22C2D18225847E6F009DD415 /* AlbumCellViewModel.swift in Sources */,
 				22C2D17D25847E2E009DD415 /* AlbumTableViewCell.swift in Sources */,
+				22C605512588271500A3270C /* Extension+UIColor.swift in Sources */,
 				22C2D187258498D1009DD415 /* AlbumDetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
