@@ -15,12 +15,14 @@ class AlbumDetailView: UIView {
     lazy var albumLabel: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.font = UIFont.boldSystemFont(ofSize: 25)
         return view
     }()
 
     lazy var artistLabel: UILabel = {
         let view = UILabel()
         view.textColor = .appleRed
+        view.font = UIFont.systemFont(ofSize: 25)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -39,7 +41,6 @@ class AlbumDetailView: UIView {
         view.textColor = .darkGray
         view.translatesAutoresizingMaskIntoConstraints = false
         view.numberOfLines = 0
-        view.contentMode = .center
         view.lineBreakMode = .byWordWrapping
         return view
     }()
@@ -109,23 +110,32 @@ class AlbumDetailView: UIView {
     }
 
     private func setupConstraints() {
+        let horizontalPadding: CGFloat = 15
         NSLayoutConstraint.activate([
             imageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            imageView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 20),
-            imageView.widthAnchor.constraint(equalTo: self.widthAnchor),
-            imageView.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.44),
+            imageView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 30),
+            imageView.widthAnchor.constraint(equalTo: self.widthAnchor, constant: -20.0),
+            imageView.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.40),
 
             albumLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 20),
             albumLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            albumLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: horizontalPadding),
+            albumLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -horizontalPadding),
 
             artistLabel.topAnchor.constraint(equalTo: albumLabel.bottomAnchor),
             artistLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            artistLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: horizontalPadding),
+            artistLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -horizontalPadding),
 
             genreLabel.topAnchor.constraint(equalTo: artistLabel.bottomAnchor),
             genreLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            genreLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: horizontalPadding),
+            genreLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -horizontalPadding),
 
-            copyrightLabel.topAnchor.constraint(equalTo: genreLabel.bottomAnchor),
+            copyrightLabel.topAnchor.constraint(equalTo: genreLabel.bottomAnchor, constant: 5),
             copyrightLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            copyrightLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: horizontalPadding),
+            copyrightLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -horizontalPadding),
 
             button.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -20),
             button.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),

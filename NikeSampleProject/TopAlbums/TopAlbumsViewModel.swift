@@ -10,7 +10,7 @@ import Foundation
 final class TopAlbumsViewModel {
 
     let networkClient: NetworkClientProtocol
-    var albums = [Album]()
+    var albums = [AlbumModel]()
     var numberOfAlbums: Int {
         return albums.count
     }

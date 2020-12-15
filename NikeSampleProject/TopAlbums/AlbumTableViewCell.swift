@@ -46,7 +46,6 @@ final class AlbumTableViewCell: UITableViewCell {
 
     func configure(_ cellViewModel: AlbumCellViewModel, imageLoader: ImageLoaderProtocol) {
         selectionStyle = .none
-        self.albumView.image = UIImage(systemName: "photo")
         layoutViews()
         self.titleLabel.text = cellViewModel.albumName
         self.artistLabel.text = cellViewModel.artistName
@@ -67,23 +66,24 @@ final class AlbumTableViewCell: UITableViewCell {
         addSubview(artistLabel)
         bringSubviewToFront(albumView)
         bringSubviewToFront(activityView)
-        let pad: CGFloat = 10
-            NSLayoutConstraint.activate([
-                albumView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-                albumView.widthAnchor.constraint(equalToConstant: 40),
-                albumView.heightAnchor.constraint(equalToConstant: 40),
-                albumView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-                activityView.centerXAnchor.constraint(equalTo: albumView.centerXAnchor),
-                activityView.centerYAnchor.constraint(equalTo: albumView.centerYAnchor),
+        let verticalPad: CGFloat = 12
+        let horizontalPad: CGFloat = 15
+        NSLayoutConstraint.activate([
+            albumView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            albumView.widthAnchor.constraint(equalToConstant: 40),
+            albumView.heightAnchor.constraint(equalToConstant: 40),
+            albumView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+            activityView.centerXAnchor.constraint(equalTo: albumView.centerXAnchor),
+            activityView.centerYAnchor.constraint(equalTo: albumView.centerYAnchor),
 
-                titleLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: -pad),
-                titleLabel.leadingAnchor.constraint(equalTo: self.albumView.trailingAnchor, constant: 20),
-                titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -40),
+            titleLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: -verticalPad),
+            titleLabel.leadingAnchor.constraint(equalTo: self.albumView.trailingAnchor, constant: horizontalPad),
+            titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -40),
 
-                artistLabel.centerYAnchor.constraint(equalTo: centerYAnchor, constant: pad),
-                artistLabel.leadingAnchor.constraint(equalTo: self.albumView.trailingAnchor, constant: 20),
-                artistLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -40)
-            ])
+            artistLabel.centerYAnchor.constraint(equalTo: centerYAnchor, constant: verticalPad),
+            artistLabel.leadingAnchor.constraint(equalTo: self.albumView.trailingAnchor, constant: horizontalPad),
+            artistLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -40)
+        ])
 
     }
 

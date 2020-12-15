@@ -1,5 +1,5 @@
 //
-//  Album.swift
+//  AlbumModel.swift
 //  NikeSampleProject
 //
 //  Created by David Rynn on 12/11/20.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Album: Decodable {
+struct AlbumModel: Decodable {
     var artistName: String
     var name: String
     var artworkUrl: String
@@ -29,7 +29,7 @@ struct Album: Decodable {
 }
 
 struct Feed: Decodable {
-    var results: [Album]
+    var results: [AlbumModel]
 }
 
 struct AppleResponse: Decodable {

@@ -24,6 +24,7 @@ final class TopAlbumsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "Albums"
         self.tableView.register(AlbumTableViewCell.self, forCellReuseIdentifier: "albumCell")
         viewModel.loadAlbums(completion: { error in
             DispatchQueue.main.async {
@@ -51,7 +52,7 @@ final class TopAlbumsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 75
     }
 
     // MARK: - Table view delegate
@@ -59,7 +60,7 @@ final class TopAlbumsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = AlbumDetailViewController(viewModel: viewModel.detailViewModel(index: indexPath.row), imageLoader: imageLoader)
         tableView.deselectRow(at: indexPath, animated: true)
- //       navigationController?.pushViewController(vc, animated: true)
+        navigationController?.pushViewController(vc, animated: true)
     }
 
 }

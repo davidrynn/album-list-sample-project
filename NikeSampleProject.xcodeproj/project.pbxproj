@@ -17,7 +17,7 @@
 		22C2D15625844EF8009DD415 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2D15525844EF8009DD415 /* NetworkClient.swift */; };
 		22C2D15E25845977009DD415 /* TopAlbumsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2D15D25845977009DD415 /* TopAlbumsTableViewController.swift */; };
 		22C2D163258459A4009DD415 /* TopAlbumsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2D162258459A4009DD415 /* TopAlbumsViewModel.swift */; };
-		22C2D16825845F8F009DD415 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2D16725845F8F009DD415 /* Album.swift */; };
+		22C2D16825845F8F009DD415 /* AlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2D16725845F8F009DD415 /* AlbumModel.swift */; };
 		22C2D16D25846811009DD415 /* AlbumTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2D16C25846811009DD415 /* AlbumTest.swift */; };
 		22C2D172258468DE009DD415 /* TestJson.json in Resources */ = {isa = PBXBuildFile; fileRef = 22C2D171258468DE009DD415 /* TestJson.json */; };
 		22C2D17D25847E2E009DD415 /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2D17C25847E2E009DD415 /* AlbumTableViewCell.swift */; };
@@ -64,7 +64,7 @@
 		22C2D15525844EF8009DD415 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		22C2D15D25845977009DD415 /* TopAlbumsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAlbumsTableViewController.swift; sourceTree = "<group>"; };
 		22C2D162258459A4009DD415 /* TopAlbumsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAlbumsViewModel.swift; sourceTree = "<group>"; };
-		22C2D16725845F8F009DD415 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		22C2D16725845F8F009DD415 /* AlbumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModel.swift; sourceTree = "<group>"; };
 		22C2D16C25846811009DD415 /* AlbumTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTest.swift; sourceTree = "<group>"; };
 		22C2D171258468DE009DD415 /* TestJson.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TestJson.json; sourceTree = "<group>"; };
 		22C2D17C25847E2E009DD415 /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
@@ -134,7 +134,7 @@
 		22C2D120258448EF009DD415 /* NikeSampleProject */ = {
 			isa = PBXGroup;
 			children = (
-				22C2D16725845F8F009DD415 /* Album.swift */,
+				22C2D16725845F8F009DD415 /* AlbumModel.swift */,
 				228E1D5825856AE70012B6D6 /* AlbumDetail */,
 				22C2D121258448EF009DD415 /* AppDelegate.swift */,
 				22C2D12A258448F0009DD415 /* Assets.xcassets */,
@@ -319,7 +319,7 @@
 				22C2D18C25849957009DD415 /* AlbumDetailViewController.swift in Sources */,
 				22C2D15E25845977009DD415 /* TopAlbumsTableViewController.swift in Sources */,
 				22C2D15625844EF8009DD415 /* NetworkClient.swift in Sources */,
-				22C2D16825845F8F009DD415 /* Album.swift in Sources */,
+				22C2D16825845F8F009DD415 /* AlbumModel.swift in Sources */,
 				22C6054C2587EAE600A3270C /* AlbumDetailView.swift in Sources */,
 				22C2D163258459A4009DD415 /* TopAlbumsViewModel.swift in Sources */,
 				22C2D18225847E6F009DD415 /* AlbumCellViewModel.swift in Sources */,
