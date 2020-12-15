@@ -75,8 +75,8 @@ class AlbumDetailView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func didMoveToWindow() {
-        super.didMoveToWindow()
+    override func willMove(toSuperview: UIView?) {
+        super.willMove(toSuperview: toSuperview)
         setupViews()
         setupConstraints()
         loadImage()
