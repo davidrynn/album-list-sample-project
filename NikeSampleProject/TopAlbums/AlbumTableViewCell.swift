@@ -18,6 +18,21 @@ final class AlbumTableViewCell: UITableViewCell {
 
     lazy var albumView: UIImageView = {
         let view = UIImageView(frame: CGRect.zero)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+
+    lazy var titleLabel: UILabel = {
+        let view = UILabel()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+
+    lazy var artistLabel: UILabel = {
+        let view = UILabel()
+        view.font = UIFont.systemFont(ofSize: 14)
+        view.textColor = .darkGray
+        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
 
@@ -30,14 +45,15 @@ final class AlbumTableViewCell: UITableViewCell {
     }
 
     func configure(_ cellViewModel: AlbumCellViewModel, imageLoader: ImageLoaderProtocol) {
-        self.imageView?.image = UIImage(systemName: "photo")
+        selectionStyle = .none
+        self.albumView.image = UIImage(systemName: "photo")
         layoutViews()
-        self.textLabel?.text = cellViewModel.albumName
-        self.detailTextLabel?.text = cellViewModel.artistName
+        self.titleLabel.text = cellViewModel.albumName
+        self.artistLabel.text = cellViewModel.artistName
         self.activityView.startAnimating()
         imageLoader.loadImage(urlString: cellViewModel.artUrl) { image in
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                self.imageView?.image = image
+                self.albumView.image = image
                 self.activityView.stopAnimating()
                 self.reloadInputViews()
             }
@@ -46,13 +62,28 @@ final class AlbumTableViewCell: UITableViewCell {
 
     private func layoutViews() {
         addSubview(activityView)
+        addSubview(albumView)
+        addSubview(titleLabel)
+        addSubview(artistLabel)
+        bringSubviewToFront(albumView)
         bringSubviewToFront(activityView)
-        if let albumImageView = imageView {
+        let pad: CGFloat = 10
             NSLayoutConstraint.activate([
-                activityView.centerXAnchor.constraint(equalTo: albumImageView.centerXAnchor),
-                activityView.centerYAnchor.constraint(equalTo: albumImageView.centerYAnchor)
+                albumView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+                albumView.widthAnchor.constraint(equalToConstant: 40),
+                albumView.heightAnchor.constraint(equalToConstant: 40),
+                albumView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+                activityView.centerXAnchor.constraint(equalTo: albumView.centerXAnchor),
+                activityView.centerYAnchor.constraint(equalTo: albumView.centerYAnchor),
+
+                titleLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: -pad),
+                titleLabel.leadingAnchor.constraint(equalTo: self.albumView.trailingAnchor, constant: 20),
+                titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -40),
+
+                artistLabel.centerYAnchor.constraint(equalTo: centerYAnchor, constant: pad),
+                artistLabel.leadingAnchor.constraint(equalTo: self.albumView.trailingAnchor, constant: 20),
+                artistLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -40)
             ])
-        }
 
     }
 

@@ -51,14 +51,15 @@ final class TopAlbumsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+        return 100
     }
 
     // MARK: - Table view delegate
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = AlbumDetailViewController(viewModel: viewModel.detailViewModel(index: indexPath.row), imageLoader: imageLoader)
-        navigationController?.pushViewController(vc, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
+ //       navigationController?.pushViewController(vc, animated: true)
     }
 
 }
