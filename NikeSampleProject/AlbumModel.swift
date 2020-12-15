@@ -14,7 +14,7 @@ struct AlbumModel: Decodable {
     var releaseDate: String
     var genres: [Genre]
     var copyright: String
-    var url: String
+    var albumUrl: String
 
     enum CodingKeys: String, CodingKey {
         case artistName
@@ -23,7 +23,7 @@ struct AlbumModel: Decodable {
         case genres
         case artworkUrl = "artworkUrl100"
         case copyright
-        case url
+        case albumUrl = "url"
     }
 
 }

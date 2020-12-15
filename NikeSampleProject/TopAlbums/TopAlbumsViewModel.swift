@@ -9,8 +9,8 @@ import Foundation
 
 final class TopAlbumsViewModel {
 
-    let networkClient: NetworkClientProtocol
-    var albums = [AlbumModel]()
+    private let networkClient: NetworkClientProtocol
+    private var albums = [AlbumModel]()
     var numberOfAlbums: Int {
         return albums.count
     }
@@ -47,7 +47,7 @@ final class TopAlbumsViewModel {
 
     func detailViewModel(index: Int) -> AlbumDetailViewModel {
         let album = albums[index]
-        return AlbumDetailViewModel(artistName: album.artistName, name: album.name, artworkUrl: album.artworkUrl, releaseDate: album.releaseDate, genres: album.genres, copyright: album.copyright, url: album.url)
+        return AlbumDetailViewModel(artistName: album.artistName, name: album.name, artworkUrl: album.artworkUrl, releaseDate: album.releaseDate, genres: album.genres, copyright: album.copyright, url: album.albumUrl)
     }
     
 }

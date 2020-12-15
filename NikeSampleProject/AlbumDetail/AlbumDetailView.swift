@@ -9,17 +9,17 @@ import UIKit
 
 class AlbumDetailView: UIView {
 
-    let imageLoader: ImageLoaderProtocol
-    let viewModel: AlbumDetailViewModel
+    private let imageLoader: ImageLoaderProtocol
+    private let viewModel: AlbumDetailViewModel
 
-    lazy var albumLabel: UILabel = {
+    private lazy var albumLabel: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.font = UIFont.boldSystemFont(ofSize: 25)
         return view
     }()
 
-    lazy var artistLabel: UILabel = {
+    private lazy var artistLabel: UILabel = {
         let view = UILabel()
         view.textColor = .appleRed
         view.font = UIFont.systemFont(ofSize: 25)
@@ -27,7 +27,7 @@ class AlbumDetailView: UIView {
         return view
     }()
 
-    lazy var genreLabel: UILabel = {
+    private lazy var genreLabel: UILabel = {
         let view = UILabel()
         view.textColor = .darkGray
         view.font = UIFont.systemFont(ofSize: 12)
@@ -35,7 +35,7 @@ class AlbumDetailView: UIView {
         return view
     }()
 
-    lazy var copyrightLabel: UILabel = {
+    private lazy var copyrightLabel: UILabel = {
         let view = UILabel()
         view.font = UIFont.systemFont(ofSize: 8)
         view.textColor = .darkGray
@@ -45,7 +45,7 @@ class AlbumDetailView: UIView {
         return view
     }()
 
-    lazy var imageView: UIImageView = {
+    private lazy var imageView: UIImageView = {
         let view = UIImageView(frame: CGRect.zero)
         view.contentMode = .scaleAspectFit
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -56,7 +56,7 @@ class AlbumDetailView: UIView {
         return view
     }()
 
-    lazy var button: UIButton = {
+    private lazy var button: UIButton = {
         let view = UIButton(frame: CGRect.zero)
         view.setTitle("More Album Info", for: .normal)
         view.backgroundColor = .appleRed
@@ -89,6 +89,8 @@ class AlbumDetailView: UIView {
             }
         })
     }
+
+    // MARK: - View layout
 
     private func setupViews() {
         backgroundColor = .white
@@ -143,6 +145,8 @@ class AlbumDetailView: UIView {
             button.heightAnchor.constraint(equalToConstant: 40)
         ])
     }
+
+    // MARK: - Actions
 
     @objc private func didTapButton() {
         if let url = URL(string: viewModel.url) {

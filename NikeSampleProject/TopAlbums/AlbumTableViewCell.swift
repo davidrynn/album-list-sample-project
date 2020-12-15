@@ -9,26 +9,26 @@ import UIKit
 
 final class AlbumTableViewCell: UITableViewCell {
 
-    lazy var activityView: UIActivityIndicatorView = {
+    private lazy var activityView: UIActivityIndicatorView = {
         let view = UIActivityIndicatorView(style: .medium)
         view.backgroundColor = .white
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
 
-    lazy var albumView: UIImageView = {
+    private lazy var albumView: UIImageView = {
         let view = UIImageView(frame: CGRect.zero)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
 
-    lazy var titleLabel: UILabel = {
+    private lazy var titleLabel: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
 
-    lazy var artistLabel: UILabel = {
+    private lazy var artistLabel: UILabel = {
         let view = UILabel()
         view.font = UIFont.systemFont(ofSize: 14)
         view.textColor = .darkGray

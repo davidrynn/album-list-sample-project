@@ -25,7 +25,7 @@ final class AlbumDetailViewController: UIViewController {
         setupViews()
     }
     
-    func setupViews() {
+    private func setupViews() {
         self.view.addSubview(detailView)
         detailView.frame = view.frame
     }

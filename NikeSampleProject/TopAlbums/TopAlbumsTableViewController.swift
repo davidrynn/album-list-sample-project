@@ -9,7 +9,7 @@ import UIKit
 
 final class TopAlbumsTableViewController: UITableViewController {
 
-    var viewModel: TopAlbumsViewModel
+    private var viewModel: TopAlbumsViewModel
     private let imageLoader = ImageLoader()
 
 
