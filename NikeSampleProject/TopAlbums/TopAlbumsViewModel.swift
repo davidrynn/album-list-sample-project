@@ -47,7 +47,7 @@ final class TopAlbumsViewModel {
 
     func detailViewModel(index: Int) -> AlbumDetailViewModel {
         let album = albums[index]
-        return AlbumDetailViewModel(artistName: album.artistName, name: album.name, artworkUrl: album.artworkUrl, releaseDate: album.releaseDate, genres: album.genres, copyright: album.copyright, url: album.albumUrl)
+        return AlbumDetailViewModel(artistName: album.artistName, name: album.name, artworkUrl: album.artworkUrl, releaseDate: album.releaseDate, genres: album.genresText, copyright: album.copyright, url: album.albumUrl)
     }
     
 }

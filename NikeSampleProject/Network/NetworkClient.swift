@@ -16,23 +16,23 @@ final class NetworkClient: NetworkClientProtocol {
     /// Fetch data using data task
     /// - Parameter completion: Uses a result with data as success and NewsReader error for an error
     func fetchData(completion: @escaping (Result<Data, NikeError>) -> Void) {
-
+        
         guard let url = URL(string: "https://rss.itunes.apple.com/api/v1/us/apple-music/top-albums/all/100/explicit.json") else {
             completion(.failure(.networkIssue("Invalid url")))
             return
         }
-
+        
         let task = URLSession.shared.dataTask(with: url) {
             data, response, error in
-                if let data = data {
-                    completion(.success(data))
-                } else {
-                    completion(.failure(NikeError.networkIssue("Unable to retreive data")))
-                }
+            if let data = data {
+                completion(.success(data))
+            } else {
+                completion(.failure(NikeError.networkIssue("Unable to retreive data")))
+            }
         }
         task.resume()
     }
-
+    
 }
 
 
@@ -44,7 +44,7 @@ enum NikeError: Error {
     case responseError(_ code: Int)
     case networkIssue(_ error: String)
     case jsonError
-
+    
     var localizedDescription: String {
         switch(self) {
         case .responseError(let code):

@@ -12,7 +12,7 @@ struct AlbumDetailViewModel {
     var name: String
     var artworkUrl: String
     var releaseDate: String
-    var genres: [Genre]
+    var genres: String
     var copyright: String
     var url: String
 }

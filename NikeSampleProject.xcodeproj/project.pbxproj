@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		22C2D122258448EF009DD415 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2D121258448EF009DD415 /* AppDelegate.swift */; };
 		22C2D124258448EF009DD415 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2D123258448EF009DD415 /* SceneDelegate.swift */; };
-		22C2D129258448F0009DD415 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C2D127258448F0009DD415 /* Main.storyboard */; };
 		22C2D12B258448F0009DD415 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22C2D12A258448F0009DD415 /* Assets.xcassets */; };
 		22C2D12E258448F0009DD415 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C2D12C258448F0009DD415 /* LaunchScreen.storyboard */; };
 		22C2D139258448F1009DD415 /* NikeSampleProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2D138258448F1009DD415 /* NikeSampleProjectTests.swift */; };
@@ -50,7 +49,6 @@
 		22C2D11E258448EF009DD415 /* NikeSampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NikeSampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22C2D121258448EF009DD415 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22C2D123258448EF009DD415 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		22C2D128258448F0009DD415 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		22C2D12A258448F0009DD415 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22C2D12D258448F0009DD415 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22C2D12F258448F0009DD415 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,7 +58,7 @@
 		22C2D13F258448F1009DD415 /* NikeSampleProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NikeSampleProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22C2D143258448F1009DD415 /* NikeSampleProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NikeSampleProjectUITests.swift; sourceTree = "<group>"; };
 		22C2D145258448F1009DD415 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		22C2D1542584499B009DD415 /* ReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
+		22C2D1542584499B009DD415 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		22C2D15525844EF8009DD415 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		22C2D15D25845977009DD415 /* TopAlbumsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAlbumsTableViewController.swift; sourceTree = "<group>"; };
 		22C2D162258459A4009DD415 /* TopAlbumsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAlbumsViewModel.swift; sourceTree = "<group>"; };
@@ -101,6 +99,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22624917258911DE000A8D56 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				22C2D16725845F8F009DD415 /* AlbumModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2262491825891200000A8D56 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				22C2D19025855E96009DD415 /* ImageLoader.swift */,
+				22C2D15525844EF8009DD415 /* NetworkClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		226249192589124C000A8D56 /* AppLaunch */ = {
+			isa = PBXGroup;
+			children = (
+				22C2D121258448EF009DD415 /* AppDelegate.swift */,
+				22C2D12C258448F0009DD415 /* LaunchScreen.storyboard */,
+				22C2D123258448EF009DD415 /* SceneDelegate.swift */,
+			);
+			path = AppLaunch;
+			sourceTree = "<group>";
+		};
+		2262491A2589126F000A8D56 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				22C605502588271500A3270C /* Extension+UIColor.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		228E1D5825856AE70012B6D6 /* AlbumDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +147,7 @@
 		22C2D115258448EF009DD415 = {
 			isa = PBXGroup;
 			children = (
+				22C2D1542584499B009DD415 /* README.md */,
 				22C2D120258448EF009DD415 /* NikeSampleProject */,
 				22C2D137258448F0009DD415 /* NikeSampleProjectTests */,
 				22C2D142258448F1009DD415 /* NikeSampleProjectUITests */,
@@ -134,18 +168,13 @@
 		22C2D120258448EF009DD415 /* NikeSampleProject */ = {
 			isa = PBXGroup;
 			children = (
-				22C2D16725845F8F009DD415 /* AlbumModel.swift */,
 				228E1D5825856AE70012B6D6 /* AlbumDetail */,
-				22C2D121258448EF009DD415 /* AppDelegate.swift */,
+				226249192589124C000A8D56 /* AppLaunch */,
 				22C2D12A258448F0009DD415 /* Assets.xcassets */,
-				22C605502588271500A3270C /* Extension+UIColor.swift */,
-				22C2D19025855E96009DD415 /* ImageLoader.swift */,
+				2262491A2589126F000A8D56 /* Extensions */,
 				22C2D12F258448F0009DD415 /* Info.plist */,
-				22C2D12C258448F0009DD415 /* LaunchScreen.storyboard */,
-				22C2D127258448F0009DD415 /* Main.storyboard */,
-				22C2D15525844EF8009DD415 /* NetworkClient.swift */,
-				22C2D1542584499B009DD415 /* ReadMe.md */,
-				22C2D123258448EF009DD415 /* SceneDelegate.swift */,
+				22624917258911DE000A8D56 /* Model */,
+				2262491825891200000A8D56 /* Network */,
 				22C2D19B258567A6009DD415 /* TopAlbums */,
 			);
 			path = NikeSampleProject;
@@ -287,7 +316,6 @@
 			files = (
 				22C2D12E258448F0009DD415 /* LaunchScreen.storyboard in Resources */,
 				22C2D12B258448F0009DD415 /* Assets.xcassets in Resources */,
-				22C2D129258448F0009DD415 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,14 +390,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		22C2D127258448F0009DD415 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				22C2D128258448F0009DD415 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		22C2D12C258448F0009DD415 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
